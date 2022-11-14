@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0%;margin: 0%;
+        }
+        .container{ width: 100vw;height: 100vh;
+            display: flex;
+            flex-direction: column;
+            animation: wall 8s infinite linear;
+        }
+        @keyframes wall{
+            0%{ 
+                background-image: linear-gradient(45deg,rgb(224, 128, 179),rgb(80, 80, 235));
+            }
+            25%{
+                background-image: linear-gradient(135deg,rgb(224, 128, 179),rgb(80, 80, 235));
+            }
+            50%{
+                background-image: linear-gradient(225deg,rgb(224, 128, 179),rgb(80, 80, 235));
+            }
+            75%{
+                background-image: linear-gradient(315deg,rgb(224, 128, 179),rgb(80, 80, 235));
+            }
+            100%{
+                background-image: linear-gradient(45deg,rgb(224, 128, 179),rgb(80, 80, 235));
+            }
+        }
+        .box{display: flex; 
+            margin: 60px auto;
+            width: 70vw;height: 70vh;
+            border: 5px solid white;
+            box-shadow: -10px 10px 20px black;
+        }
+        .box1{
+            width: 5%;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation-name: somu;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+        }
+        .box2{
+            width: 20px;
+            height: 5%;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            margin: 0%; 
+            animation-name: somu1;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+        .box3{
+            width: 5%;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            animation-name: somu2;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+        .box4{
+            width: 20px;
+            height: 5%;
+            background-color: black;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;  
+            animation-name: somu3;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+        @keyframes somu{
+            from{
+               width: 5vw;
+               height: 20px;
+            }
+            to{
+               width: 99vw;
+               height: 20px;
+            }
+        }
+        @keyframes somu1{
+            from{
+               width: 20px;
+               height: 5vh;
+            }
+            to{
+               width: 20px;
+               height: 99vh;
+            }
+        }
+        @keyframes somu2{
+            from{
+               width: 5vw;
+               height: 20px;
+            }
+            to{
+               width: 99vw;
+               height: 20px;
+            }
+        }
+        @keyframes somu3{
+            from{
+               width: 20px;
+               height: 5vw;
+            }
+            to{
+               width: 20px;
+               height: 99vh;
+            }
+        }
+        .hd{
+            margin-top: 70px;
+            font-family: cursive;
+            font-size: 2rem;
+            color: white;
+            font-weight: bolder;
+            text-shadow: 1px 1px 20px white;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+        }
+        fieldset{
+            margin: auto;
+            width: 50vw;
+            height: 50vh;
+            border: 2px solid white;
+        }
+        legend{
+            text-transform: uppercase;
+            color: white;
+            border: 2px solid white;
+            margin: 5px;
+            padding: 5px;
+            font-size: 15px;
+        }
+        p{
+            margin: 5px;
+            font-size: 15px;
+            color: white;
+
+        }
+        .img1 img{
+            width: 20px;height: 20px;
+            position: relative;
+            top: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .img2 img{
+            width: 20px;height: 20px;
+            position: relative;
+            top: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .fd input{
+            width: 40vw;
+        }
+        .btn button{
+            background-color: aqua;
+            border-radius: 20px;
+            padding: 5px;
+            font-size: 13px;
+            transition: 1s;
+        }
+        .btn button:hover{
+            letter-spacing: 3px;
+            font-size: 16px;
+            background-color: rgb(21, 106, 106);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hd"><center><h1>feedback</h1></center></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+       <div class="box">
+           <fieldset>
+            <legend>  feedback form  </legend>
+             <p> <form action="https://formsubmit.co/thakursomu13@gmail.com" method="post"></form>
+                Name : <br><input type="text" minlength="4" maxlength="20" name="Name" placeholder="write your name" required><br><br>
+                Course : <input type="text" list="c_li" name="Course" maxlength="7" placeholder="your course" required>  (type if other)<datalist id="c_li"><option>BCA</option><option>BBA</option></datalist><br><br>
+                Sec : <input type="radio" name="Section" value="A">A  <input type="radio" name="Section" value="B">B  <input type="radio" name="Section" value="C">C   <input type="radio" name="Section" value="D">D   <input type="radio" name="Section" value="E">E<br><br> 
+                Ad no. : <input type="password" placeholder="your adm no" maxlength="10" name="Admission no." id="password" required><span class="img1"><img src="https://cdn-icons-png.flaticon.com/128/709/709612.png"></span><span class="img2"><img src="https://cdn-icons-png.flaticon.com/128/2767/2767146.png" class="img2"></span><br><br>
+                phone : <input type="tel" name="phone number" minlength="13" maxlength="13" value="+91" required><br><br>
+                feedback : <input type="text" name="Feedback" class="fd" placeholder="write your feedback" required><br>
+                <center><span class="btn"><button type="submit">SUBMIT</button> <button type="reset">RESET</button></span> </center>
+            </form>
+            </p>
+            </fieldset>           
+        </div>
+    </div>
+</body>
+<script>
+$('document').ready(function () {
+    $('.img2 img').hide();
+    $('.img1 img').click(function () {
+        $('.img1 img').toggle();
+        $('.img2 img').toggle();
+            if(password.type == "password"){
+                password.type = "text";
+            }
+    });
+    $('.img2 img').click(function () {
+        $('.img2 img').toggle();
+        $('.img1 img').toggle();
+        if(password.type == "text"){
+            password.type = "password";
+        }
+    });
+   
+})
+</script>
+</html>
