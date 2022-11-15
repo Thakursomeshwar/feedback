@@ -13,13 +13,14 @@
         body{
             width: 100%;
             height: 100%;
+            position: fixed;
         }
         .container{ width: 100%;
           height: 100%;
             display: flex;
             flex-direction: column;
             animation: wall 8s infinite linear;
-            Position: fixed;
+            position: fixed;
         }
         @keyframes wall{
             0%{ 
@@ -43,6 +44,7 @@
             width: 60vw;height: 60vh;
             border: 5px solid white;
             box-shadow: -10px 10px 20px black;
+            position: fixed;
         }
         .box1{
             width: 5%;
@@ -159,7 +161,7 @@
             border: 2px solid white;
             margin: 5px;
             padding: 5px;
-            font-size: 9px;
+            font-size: 10px;
         }
         p{
             margin: 5px;
@@ -187,15 +189,17 @@
             background-color: aqua;
             border-radius: 20px;
             padding: 5px;
-            font-size: 8px;
+            font-size: 10px;
             transition: 1s;
         }
         .btn button:hover{
             letter-spacing: 3px;
-            font-size: 10px;
+            font-size: 12px;
             background-color: rgb(21, 106, 106);
         }
-    
+     .opt{ color: white;
+        font-size: 9px;
+}
     </style>
 </head>
 <body>
@@ -209,12 +213,12 @@
            <fieldset>
             <legend>  feedback form  </legend>
              <p> <form action="https://formsubmit.co/thakursomu13@gmail.com" method="post">
-                Name : <br><input type="text" minlength="4" maxlength="20" name="Name" placeholder="write your name" required><br><br>
+                <div class="opt">Name : <br><input type="text" minlength="4" maxlength="20" name="Name" placeholder="write your name" required><br><br>
                 Course : <input type="text" list="c_li" name="Course" maxlength="7" placeholder="your course" required>  (type if other)<datalist id="c_li"><option>BCA</option><option>BBA</option></datalist><br><br>
-                Sec : <input type="radio" name="Section" value="A">A  <input type="radio" name="Section" value="B">B  <input type="radio" name="Section" value="C">C   <input type="radio" name="Section" value="D">D   <input type="radio" name="Section" value="E">E<br><br> 
+                Sec : <input type="radio" name="Section" value="A">A  <input type="radio" name="Section" value="B">B  <input type="radio" name="Section" value="C">C   <input type="radio" name="Section" value="D">D<br><br> 
                 Ad no. : <input type="password" placeholder="your adm no" maxlength="10" name="Admission no." id="password" required><span class="img1"><img src="https://cdn-icons-png.flaticon.com/128/709/709612.png"></span><span class="img2"><img src="https://cdn-icons-png.flaticon.com/128/2767/2767146.png" class="img2"></span><br><br>
                 phone : <input type="tel" name="phone number" minlength="13" maxlength="13" value="+91" required><br><br>
-                feedback : <input type="text" name="Feedback" class="fd" placeholder="write your feedback" required><br>
+                feedback : <input type="text" name="Feedback" class="fd" placeholder="write your feedback" required><br></div>
                 <center><span class="btn"><button type="submit">SUBMIT</button> <button type="reset">RESET</button></span> </center>
             </form>
             </p>
